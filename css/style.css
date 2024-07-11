@@ -1,0 +1,215 @@
+/* Fonte */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Geral */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+/* Cabeçalho */
+
+header {
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 1rem;
+  font-weight: 300;
+  background-color: #ffffffd0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  gap: 2.6rem;
+
+  .container_nav {
+    padding: 1rem;
+  }
+
+  .texto_nav {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+}
+
+/* Home */
+
+.home_container {
+  background-image: url(../img/bckground.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.6rem;
+
+  h1 {
+    font-size: 5rem;
+    color: white;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+    font-weight: 300;
+    color: #b8b7b7;
+  }
+
+  .botoes_home {
+    display: flex;
+    gap: 2.6rem;
+
+    a {
+      background-color: transparent;
+      color: black;
+      background-color: #ffffffa1;
+      border-radius: 1rem;
+      padding: 1rem;
+      font-size: 1.6rem;
+      text-decoration: none;
+      display: block;
+      width: 15rem;
+      text-align: center;
+      transition: 1s;
+    }
+
+    a:hover {
+      transform: translateY(-3px);
+      background-color: white;
+    }
+  }
+}
+
+/* seção de Cards */
+
+.cards {
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.4rem;
+  gap: 2.6rem;
+  width: 100%;
+  background-color: #d7cec9;
+
+  h2 {
+    margin: 1.8rem;
+    font-size: 2.8rem;
+  }
+
+  .cartoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.6rem;
+  }
+
+  .card {
+    margin: 0 auto;
+    width: 30rem;
+    height: 60vh;
+    padding: 1rem;
+    border-radius: 4rem;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 1s;
+
+    img {
+      border-radius: 3rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .card-title {
+      text-align: center;
+      font-size: 1.6rem;
+    }
+
+    .card-text {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+/* Explicação Cards */
+
+.exp_cards {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  background-color: #09090b;
+
+  .exp_cartoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    padding: 1rem;
+  }
+
+  h2 {
+    margin: 1.8rem;
+    font-size: 2.8rem;
+    color: white;
+  }
+
+  .card {
+    width: 30rem;
+    height: 40vh;
+    border-radius: 4rem;
+    padding: 1.6rem;
+    display: flex;
+    background-color: #09090b;
+    border: 1px solid grey;
+  }
+
+  .card-body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.6rem;
+  }
+
+  h5 {
+    font-size: 2rem;
+    color: #00d9ff;
+  }
+
+  p {
+    font-size: 1.6rem;
+    color: #b8b7b7;
+  }
+
+  a {
+    width: 50%;
+    font-size: 1.6rem;
+    background-color: #00d9ff;
+    color: black;
+    border-radius: 2rem;
+  }
+}
