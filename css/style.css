@@ -18,84 +18,176 @@ html {
 /* Cabeçalho */
 
 header {
-  font-size: 1.6rem;
   width: 100%;
-  padding: 1rem;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: absolute;
+  z-index: 1;
 }
 
 nav {
+  padding: 1rem;
+  font-size: 1.6rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  border-radius: 1rem;
-  font-weight: 300;
-  background-color: #ffffffd0;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 2rem;
   gap: 2.6rem;
+  background-color: #ffffff;
+  box-shadow: rgba(99, 99, 99, 0.041) 0px 5px 1rem 0px;
+  position: relative;
 
-  .container_nav {
-    padding: 1rem;
+  .menuIconNav {
+    display: none;
   }
 
-  .texto_nav {
-    font-size: 1.6rem;
-    font-weight: 500;
+  div {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2.6rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .inscrever {
+    padding: 1rem;
+    background-color: antiquewhite;
+    border-radius: 1rem;
+    display: block;
+    transition: 1s;
+  }
+
+  .inscrever:hover {
+    transform: scale(1.1);
+    background-color: #ffd69f;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .IconNavLinks {
+    position: absolute;
+    right: 0;
+    display: none;
+    top: 5rem;
+    padding: 1.6rem;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 }
 
 /* Home */
 
-.home_container {
-  background-image: url(../img/bckground.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  padding: 1rem;
-  text-align: center;
+.home {
+  position: relative;
+  align-items: center;
   display: flex;
   flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2.6rem;
+
+  .divisao {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    gap: 2.6rem;
+    padding: 1.6rem;
+  }
 
   h1 {
-    font-size: 5rem;
-    color: white;
-    font-weight: 300;
+    font-size: 4.6rem;
+    text-align: center;
+    font-weight: 400;
   }
 
   h2 {
-    font-size: 3.6rem;
+    font-size: 2.6rem;
+    text-align: center;
     font-weight: 300;
-    color: #b8b7b7;
+  }
+
+  img {
+    width: 60%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 3px;
   }
 
   .botoes_home {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2.6rem;
     gap: 2.6rem;
 
     a {
-      background-color: transparent;
-      color: black;
-      background-color: #ffffffa1;
-      border-radius: 1rem;
-      padding: 1rem;
-      font-size: 1.6rem;
+      color: white;
       text-decoration: none;
+      font-size: 1.6rem;
+      padding: 1rem;
+      border-radius: 1rem;
+      background-color: black;
       display: block;
-      width: 15rem;
+      width: 10rem;
       text-align: center;
       transition: 1s;
     }
 
     a:hover {
       transform: translateY(-3px);
-      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 3px;
+    }
+  }
+
+  .seta {
+    position: absolute;
+    display: block;
+    bottom: 2rem;
+    padding: 1rem;
+    box-shadow: 1px -1px 0 1px #000 inset;
+    border: solid transparent;
+    border-width: 0 0 1px 1px;
+    animation: anima-seta 3s ease-in-out infinite;
+    cursor: pointer;
+  }
+}
+@keyframes anima-seta {
+  0% {
+    transform: translateY(-3rem) rotateZ(-45deg);
+  }
+  50% {
+    transform: translateY(0rem) rotateZ(-45deg);
+  }
+  100% {
+    transform: translateY(-3rem) rotateZ(-45deg);
+  }
+}
+
+@media screen and (max-width: 764px) {
+  .backgroundHome {
+    display: none;
+  }
+  nav {
+    .menuIconNav {
+      display: block;
+      font-size: 2.6rem;
+    }
+
+    .linksNav,
+    .inscrever {
+      display: none;
+    }
+
+    .menuIconNav:hover  .IconNavLinks {
+      display: flex;
+      flex-flow: column;
+      font-weight: 300;
+      font-size: 1.8rem;
     }
   }
 }
