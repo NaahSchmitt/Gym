@@ -270,6 +270,7 @@ height:100%;
     justify-content: center;
  }
  
+ 
  .banner h1{
      text-transform: uppercase;     /* DEixa os elementos em letra Maiusculas*/
      font-weight: bold;    /*Negrito*/
@@ -284,7 +285,7 @@ height:100%;
 }
 
 .banner h1 span{
-  color:#b28756;
+  color:#acacac;
 }
 .banner h2{
     text-transform: uppercase;  /* DEixa os elementos em letra Maiusculas*/
@@ -327,6 +328,10 @@ height:100%;
   color: #ccc;
   margin-top: 10px;
   margin-bottom: 40px;
+}
+.section_desc:hover{
+  color:#b28756;
+  
 }
 
 .default .section_body{
@@ -420,28 +425,7 @@ box-shadow: 0px 5px 10px #333;  /*efeito sombra (ou seja, adcionando uma sombra 
   padding: 0px 20px;
  
 }
-.section_project_filters ul,
-.section_project_filters li{
-  list-style: none;  
-}
-.section_project_filters li{
-display: inline-block;
-padding: 10px;
-text-transform: uppercase;
-font-size: 13px;
-border-left: 1px solid #ccc;
-color:#555;
-border-bottom: 3px solid #EEE;
-cursor: pointer;  /*Ao passar o mouse aparece uma maozinha(tipo linkavel)*/
-}
-.section_project_filters li:hover,
-.section_project_filters li.active{
-  border-bottom: 3px solid #b28756;
-}
 
-.section_project_filters li:first-child{    /*para remover a borda do primeiro item*/
-  border-left: 0px;
-}
 
 .section_projects_photos{
   width:100vw;
@@ -541,7 +525,7 @@ display:flex;
 
 
 
-.section_Team_area .slide_pointers{
+.section_Team_area {
   width:100vw;
   height: 20px;
   display: flex;
