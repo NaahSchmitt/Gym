@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'monteserrat',Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -111,11 +111,12 @@ nav {
   padding: 2.4rem;
   gap: 2.6rem;
   width: 100%;
-  background-color: #d7cec9;
+  background-color: #000;
 
   h2 {
     margin: 1.8rem;
     font-size: 2.8rem;
+    color: #fff;
   }
 
   .cartoes {
@@ -131,7 +132,7 @@ nav {
     width: 30rem;
     height: 60vh;
     padding: 1rem;
-    border-radius: 4rem;
+    border-radius: none;
     border: none;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: 1s;
@@ -160,7 +161,7 @@ nav {
   display: flex;
   flex-flow: column;
   text-align: center;
-  background-color: #09090b;
+  background-color: #fff;
 
   .exp_cartoes {
     display: flex;
@@ -169,6 +170,10 @@ nav {
     flex-wrap: wrap;
     gap: 1.6rem;
     padding: 1rem;
+  }
+
+  .exp_cardsh2{
+    color: #000;
   }
 
   h2 {
@@ -180,7 +185,7 @@ nav {
   .card {
     width: 30rem;
     height: 40vh;
-    border-radius: 4rem;
+    border-radius: none;
     padding: 1.6rem;
     display: flex;
     background-color: #09090b;
