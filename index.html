@@ -26,57 +26,48 @@
   <body>
     <!-- Cabeçalho -->
     <header>
-      <nav class="navbar navbar-expand-lg" data-bs-theme="light">
-        <div class="container-fluid container_nav">
-          <a class="navbar-brand texto_nav" href="#">GYM</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Sobre</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Aulas</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Contatos</a
-                >
-              </li>
-            </ul>
+      <nav>
+        <a href="">Gym Academy</a>
+        <i class="fa-solid fa-bars menuIconNav">
+          <div class="IconNavLinks">
+            <a href="">Home</a>
+            <a href="">Sobre</a>
+            <a href="">Aulas</a>
+            <a href="">Contatos</a>
           </div>
+        </i>
+        
+
+        <div class="linksNav">
+          <a href="">Home</a>
+          <a href="">Sobre</a>
+          <a href="">Aulas</a>
+          <a href="">Contatos</a>
         </div>
+        <a href="" class="inscrever">Inscreva-se</a>
       </nav>
     </header>
+
 
     <!-- Conteúdo da Página -->
     <main>
       <!-- Home -->
-      <section class="home_container">
-        <h1>Sua Academia Completa</h1>
-        <h2>Aulas para todos os níveis</h2>
+      <section class="home">
+        <div class="divisao">
+          <div class="conteudo_home">
+            <h1>Sua Academia Completa</h1>
+            <h2>Aulas para todos os níveis</h2>
 
-        <div class="botoes_home">
-          <a href="">Agendar</a>
-          <a href="">Planos</a>
+            <div class="botoes_home">
+              <a href="">Agendar</a>
+              <a href="">Planos</a>
+            </div>
+          </div>
+
+          <img class="backgroundHome" src="./img/bckground.jpg" alt="" />
         </div>
+
+        <a class="seta" href=""></a>
       </section>
 
       <!-- seção de Cards -->
@@ -414,4 +405,6 @@
   
     </main>
   </body>
+
+  <script src="https://kit.fontawesome.com/7cd1c80b15.js" crossorigin="anonymous"></script>
 </html>
