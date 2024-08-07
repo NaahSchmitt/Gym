@@ -7,12 +7,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "monteserrat", Arial, Helvetica, sans-serif;
 }
 
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+}
+
+body {
+  background-color: var(--escuro);
+}
+
+/* Cores */
+
+:root {
+  --laranja: #F5622B;
+  --branco: #F4F4F4;
+  --escuro: #35363A;
 }
 
 /* Cabeçalho */
@@ -33,9 +45,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  border-radius: 2rem;
   gap: 2.6rem;
-  background-color: #ffffff;
+  background-color: #000000d2;
   box-shadow: rgba(99, 99, 99, 0.041) 0px 5px 1rem 0px;
   position: relative;
 
@@ -52,21 +63,21 @@ nav {
 
   a {
     text-decoration: none;
-    color: black;
+    color: var(--branco);
   }
 
   .inscrever {
     padding: 1rem;
-    background-color: antiquewhite;
-    border-radius: 1rem;
+    background-color: #B28756;
     display: block;
-    transition: 1s;
+    color: black;
+    transition: 0.5s;
   }
 
   .inscrever:hover {
-    transform: scale(1.1);
-    background-color: #ffd69f;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #af9b84;
+    color: var(--branco);
   }
 
   .IconNavLinks {
@@ -75,8 +86,6 @@ nav {
     display: none;
     top: 5rem;
     padding: 1.6rem;
-    background-color: white;
-    border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 }
@@ -84,98 +93,94 @@ nav {
 /* Home */
 
 .home {
-  position: relative;
-  align-items: center;
+  background-image: linear-gradient(to bottom, #68686885, #3b0a2fba), url(../img/Wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.6rem;
 
-  .divisao {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100vh;
-    gap: 2.6rem;
-    padding: 1.6rem;
-  }
 
   h1 {
-    font-size: 4.6rem;
     text-align: center;
-    font-weight: 400;
+    font-size: 5.6rem;
+    color: white;
   }
 
   h2 {
-    font-size: 2.6rem;
     text-align: center;
+    font-size: 3.6rem;
     font-weight: 300;
+    color: var(--branco);
   }
 
-  img {
-    width: 60%;
-    height: 70%;
-    object-fit: cover;
-    border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 3px;
-  }
-
-  .botoes_home {
+  .botoes_home{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2.6rem;
     gap: 2.6rem;
+    margin: 2.4rem;
+  }
 
-    a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.6rem;
-      padding: 1rem;
-      border-radius: 1rem;
-      background-color: black;
-      display: block;
-      width: 10rem;
-      text-align: center;
-      transition: 1s;
-    }
+  a{
+    font-size: 1.6rem;
+    color: var(--branco);
+    background-color: #000000c5;
+    padding: 1.2rem;
+    text-decoration: none;
+    width: 10rem;
+    text-align: center;
+    transition: .1s;
+  }
 
-    a:hover {
-      transform: translateY(-3px);
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 3px;
-    }
+  a:hover{
+    transform: translateY(-3px);
   }
 
   .seta {
     position: absolute;
+    background-color: transparent;
     display: block;
     bottom: 2rem;
     padding: 1rem;
-    box-shadow: 1px -1px 0 1px #000 inset;
+    box-shadow: 1px -1px 0 1px #ffffff inset;
     border: solid transparent;
     border-width: 0 0 1px 1px;
     animation: anima-seta 3s ease-in-out infinite;
     cursor: pointer;
   }
 }
+
 @keyframes anima-seta {
   0% {
     transform: translateY(-3rem) rotateZ(-45deg);
   }
+
   50% {
     transform: translateY(0rem) rotateZ(-45deg);
   }
+
   100% {
     transform: translateY(-3rem) rotateZ(-45deg);
   }
 }
 
-@media screen and (max-width: 764px) {
+@media screen and (max-width: 805px) {
   .backgroundHome {
     display: none;
   }
+
   nav {
     .menuIconNav {
       display: block;
       font-size: 2.6rem;
+      background-color: var(--escuro);
+      color: var(--branco);
     }
 
     .linksNav,
@@ -183,11 +188,14 @@ nav {
       display: none;
     }
 
-    .menuIconNav:hover  .IconNavLinks {
+    .menuIconNav:hover .IconNavLinks {
       display: flex;
       flex-flow: column;
       font-weight: 300;
       font-size: 1.8rem;
+      border-radius: 0;
+      background-color: #000000dc;
+      color: white;
     }
   }
 }
@@ -203,11 +211,12 @@ nav {
   padding: 2.4rem;
   gap: 2.6rem;
   width: 100%;
-  background-color: #d7cec9;
+  background-color: #000;
 
   h2 {
     margin: 1.8rem;
     font-size: 2.8rem;
+    color: #fff;
   }
 
   .cartoes {
@@ -221,15 +230,15 @@ nav {
   .card {
     margin: 0 auto;
     width: 30rem;
-    height: 60vh;
-    padding: 1rem;
-    border-radius: 4rem;
+    height: 400px;
+    padding: 5px;
+    border-radius: none;
     border: none;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: 1s;
 
     img {
-      border-radius: 3rem;
+      border-radius: none;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
@@ -252,7 +261,7 @@ nav {
   display: flex;
   flex-flow: column;
   text-align: center;
-  background-color: #09090b;
+  background-color: #fff;
 
   .exp_cartoes {
     display: flex;
@@ -263,16 +272,20 @@ nav {
     padding: 1rem;
   }
 
+  .exp_cardsh2 {
+    color: #000;
+  }
+
   h2 {
     margin: 1.8rem;
     font-size: 2.8rem;
-    color: white;
+    color: var(--branco);
   }
 
   .card {
     width: 30rem;
     height: 40vh;
-    border-radius: 4rem;
+    border-radius: none;
     padding: 1.6rem;
     display: flex;
     background-color: #09090b;
@@ -304,4 +317,402 @@ nav {
     color: black;
     border-radius: 2rem;
   }
+}
+
+/* naty */
+
+.button {
+  display: inline-block;
+  /*o background do botao nao ultrapassa a margem de tamanho do conteudo etc*/
+  background-color: #b28756;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600px;
+  /* itensidade daa fonte seja ela negrito ou peso*/
+  text-decoration: none;
+  padding: 10px 30px;
+  /*os dois valores significam Padding vertical  e padding horizontal*/
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.button:hover {
+  background-color: #af9b84;
+  color: #fff;
+}
+
+.banner {
+  height: calc(100vh - 100px);
+  /*100vh pega o tamanho do monitor, porem deixando barra de rolagem, p n acontecer isso podemos usar o calc fzd uma conta diminuindo por 100px do header (descontar os 100px utilizado no header, respeitando o espaço )*/
+  background-color: #ccc;
+  background-image: url("../img/imagem2.jpg");
+  background-size: cover;
+  /*ajusta a img de forma que preencha todo espaço da tela*/
+  background-position: bottom;
+  /*vai priorizar a parte inf da img (dando um pouco mais de 'enfase' ->zoom na parte inf( se eu usar o Center ele iria usar a img mais no meio e etc..*/
+  overflow: hidden;
+  /*Tudo o que passar da tela horizontalmente ele vai ignorar, deixando visualmente apenas o tamanho da tela. (devido o slide utilizado abaixo) */
+}
+
+.banner .sliders {
+  width: 1000vw;
+  height: 100%;
+}
+
+.banner .slide {
+  width: 100vw;
+  height: 100%;
+  display: inline-block;
+  background-color: rgba(0,
+      0,
+      0,
+      0.8);
+  /*para colocar um fundo 'preto' transparente no banner   */
+  display: inline-block;
+}
+
+.banner .slide_area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h1 {
+  text-transform: uppercase;
+  /* DEixa os elementos em letra Maiusculas*/
+  font-weight: bold;
+  /*Negrito*/
+  font-size: 40px;
+  /* Tamanho da fonte*/
+}
+
+.banner h1 span {
+  color: #b28756;
+}
+
+.banner h2 {
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.banner h1 span {
+  color: #acacac;
+}
+
+.banner h2 {
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.banner .pointer {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #b28756;
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  /*Este cursor é para adcionar o efeito de maozinha ao passar o mouse por cima do (pointer)*/
+}
+
+.banner .pointer.active {
+  background-color: #b28756;
+  /*preenchendo a primeira bolinha*/
+}
+
+.default {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.default .section_title,
+.default .section_desc {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  /*Negrito*/
+}
+
+.default .section_title {
+  font-size: 20px;
+}
+
+.default .section_desc {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.section_desc:hover {
+  color: #b28756;
+}
+
+.default .section_body {
+  max-width: 1140px;
+  /* é a mesma que definimmos no nosso menu Àcima*/
+  margin: auto;
+  /*Fazer ir pro meio*/
+}
+
+.default.light {
+  background-color: #f7f7f7;
+}
+
+.deafult.light .section_title,
+.default.light .section_body {
+  color: #000;
+}
+
+.default.dark {
+  background-color: #000;
+}
+
+.default.dark .section_title,
+.default.dark .section_body {
+  color: #fff;
+}
+
+/* 
+  CSS DE ÁREAS ESPECIFICAS
+*/
+section_body {
+  display: flex;
+}
+
+.aboutus {
+  display: flex;
+}
+
+.aboutus__left {
+  flex: 1;
+}
+
+.aboutus__left p {
+  font-size: 14px;
+  /*tamanho da fonte*/
+  line-height: 25px;
+  /*Espaço entre as linhas do texto*/
+}
+
+.aboutus__right {
+  width: 520px;
+  text-align: center;
+  /* ajustando a imagem*/
+}
+
+.aboutus__right img {
+  width: 360px;
+  box-shadow: 0px 5px 10px #333;
+  /*efeito sombra (ou seja, adcionando uma sombra na img)*/
+}
+
+.section_services {
+  display: flex;
+  text-align: center;
+}
+
+.section_service {
+  flex: 1;
+  border-right: 1px solid #333;
+  padding: 15px;
+}
+
+.section_service:first-child {
+  /* criado só pra adcionar o efeito de borda left na primeira img de services*/
+  border-left: 1px solid #333;
+}
+
+.section_service h4 {
+  margin-top: 20px;
+  text-transform: uppercase;
+  /*MAIUSCULA*/
+  font-size: 18px;
+}
+
+.section_service p {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #999;
+}
+
+.section__projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section_project_filters {
+  border: 1px solid #ccc;
+  background-color: #eee;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.section_projects_photos {
+  width: 100vw;
+  max-width: 1140px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section_projects_photo {
+  width: 280px;
+}
+
+.section_projects_photoarea {
+  margin: 10px;
+  width: 260px;
+  height: 160px;
+}
+
+.section_projects_photoarea img {
+  width: inherit;
+  /*herda o mesmo tamanho da fonte usada anterior*/
+  height: inherit;
+}
+
+.section_projects_photoinfo {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: inherit;
+  height: inherit;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+}
+
+.section_projects_photoinfo h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.section_projects_photoarea:hover .section_projects_photoinfo {
+  display: flex;
+}
+
+.bg-team {
+  background-image: url("../Css/imagens/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 0px;
+}
+
+.section_team_area {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.section_Team {
+  overflow: hidden;
+  /*remove a area desperdiçada*/
+  max-width: 880px;
+  margin: auto;
+}
+
+.section_Team .sliders {
+  width: 1000vw;
+  height: 100%;
+  max-width: 880px;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.section_Team .slide {
+  width: 370px;
+  height: 280px;
+  min-height: 250px;
+  display: inline-block;
+  background-color: #fff;
+  margin-right: 20px;
+  margin-bottom: 100px;
+  margin-top: 0px;
+  justify-content: center;
+}
+
+.section_Team .slide_area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  padding: 20px;
+}
+
+.section_Team_area {
+  width: 100vw;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section_Team_area .pointer {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #b28756;
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  /*Este cursor é para adcionar o efeito de maozinha ao passar o mouse por cima do (pointer)*/
+}
+
+.section_Team_area .pointer.active {
+  background-color: #b28756;
+}
+
+.Section-team--avatar {
+  width: 100px;
+  height: auto;
+}
+
+.Section-team--name {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 17px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.Section-team--role {
+  font-size: 14px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.Section-team--social {
+  display: flex;
+  /*para que os itens abaixo fiquem organizados lado a lado certinho.*/
+  margin-top: 10px;
+}
+
+.Section-team--social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 13px;
+  margin-right: 10px;
+  /*a f a s t a os itens*/
+}
+
+.Section-team--social a:hover {
+  background-color: #ccc;
 }
